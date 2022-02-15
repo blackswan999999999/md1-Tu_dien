@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let k = prompt(' từ bạn muốn dịch là:  ')
+    let dic1 = ['hello', 'goodbye', 'thank you'];
+    let dic2 = ['xin chào', 'tạm biệt', 'cảm ơn'];
+    t=k.toLowerCase()
+    console.log('k=====',t)
+    for (let i = 0; i < dic1.length; i++) {
+
+        if (t == dic1[i]) {
+            document.write(' Ý nghĩa của từ ' + dic1[i] + '  là   ' + dic2[i])
+            break;
+        }
+        if (t != dic1[i] && i == 2) {
+            document.write(' từ bạn tìm lạ quá mình hong có piết')
+
+        }
+    }
+    //nếu không có break thì ví dụ: 'hello' sẽ được tìm thấy trong mảng ở vị trí i=0 tuy nhiên hàm ko dừng lại mà đi tiếp tới i<dic1.length
+    //tức là if2 cũng sẽ được thực thi luôn  cho tới khi i=2 thoát ra khỏi vòng lặp!
+
+</script>
+</html>
